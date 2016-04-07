@@ -208,6 +208,8 @@ $scope.GetFlightData = function () {
 						        {
 						            $("#lblErrorMessage").html(response.data[0].ErrorMessage);
 						            $("#dvErrorMessage").show();
+									//$("#no-more-tables").hide();
+									
 						        }
 						    }
 						    else
@@ -218,6 +220,10 @@ $scope.GetFlightData = function () {
 							        // var transformed = angular.fromJson(response);        
 							        
 						    }
+							//if(response.data == null)
+							//{
+								//$("#no-more-tables").hide();
+							//}
 						    $scope.GetNearByAptData();
 						    $scope.GetSocialFeedsData();
 						    $scope.GetWeatherData();
